@@ -12,9 +12,26 @@ string som parameter.
 
 Hvis stringen begynner med en bokstav skal denne gjøres om til uppercase, 
 slik at om du sender inn "terje" blir det gjort om til "Terje". -->
+<p id="StorBokstav">terje er med stor T</p>
+<button onclick="magic()">send</button>
 
 <script>
+
+    let string = "terje"
     
+    function StringPara(name){
+        let firstLetter = name.charAt(0).toUpperCase();
+        let restOfLetters = name.slice(1);
+        return firstLetter + restOfLetters;
+        
+        }
+
+        function magic() {
+             document.getElementById('StorBokstav').innerHTML = StringPara(string);
+        }
+
+       
+
 </script>
     
 </body>
